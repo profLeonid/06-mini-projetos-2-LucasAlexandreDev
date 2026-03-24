@@ -12,3 +12,16 @@ const criarListaNumeros = function(quantidade){
     return listaNumeros
 }
 
+
+// função que retornar uma lista de Adição (de acordo com a quantidade do número que o usuário digitar)
+const criarListaAdicao = function(quantidade){
+
+    let listaAdicao = []
+
+    for(let i = 1; i <= quantidade; i++){
+        listaAdicao.push(i + quantidade)
+    }
+
+    return listaAdicao
+}
+
