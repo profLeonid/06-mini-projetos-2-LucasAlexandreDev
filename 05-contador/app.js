@@ -12,6 +12,7 @@ const criarListaNumeros = function(quantidade){
     return listaNumeros 
 }
 
+
 // função que retona uma lista de números pares até a quantidade limite de acordo com o usuário
 const criarListaPares = function(quantidade){
 
@@ -23,4 +24,18 @@ const criarListaPares = function(quantidade){
 
     return listaNumerosPares
 }
+
+
+// função que retorna uma lista de números impares até a quantidade limite de acordo com o usuário
+const criarListaImpares = function(quantidade){
+
+    let listaNumerosImpares = []
+
+    for(let i = 1; i <= quantidade; i++){
+        listaNumerosImpares.push( (i * 2) -1)
+    }
+
+    return listaNumerosImpares
+}
+
 
