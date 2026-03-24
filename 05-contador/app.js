@@ -50,3 +50,37 @@ const criarListaMultiplicativa5 = function(quantidade){
     return listaNumerosMultiplicativo5
 }
 
+
+const criarListaPotencia2 = function(quantidade){
+
+    let listaNumerosPotencia2 = []
+
+    for(let i = 0; i <= quantidade; i++){
+        listaNumerosPotencia2.push(2 ** i)
+    }
+
+    return listaNumerosPotencia2
+}
+
+// função que cria a linha do tbory do HTML
+const criarLinha = function(numero, par, impar, multiplicativo, potencia){
+
+    const tbory            = document.getElementById('tbody')
+    const tr               = document.createElement('tr') 
+    
+    const tdNumero         = document.createElement('td')
+    const tdPar            = document.createElement('td')
+    const tdImpar          = document.createElement('td')
+    const tdMultiplicativo = document.createElement('td')
+    const tdPotencia       = document.createElement('td')
+
+    tdNumero.textContent         = numero
+    tdPar.textContent            = par
+    tdImpar.textContent          = impar
+    tdMultiplicativo.textContent = multiplicativo
+    tdPotencia.textContent       = potencia
+
+    tr.replaceChildren(tdNumero, tdPar, tdImpar, tdMultiplicativo, tdPotencia)
+    
+    tbory.appendChild(tr)
+}
