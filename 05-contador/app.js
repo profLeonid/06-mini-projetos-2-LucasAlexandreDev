@@ -11,3 +11,16 @@ const criarListaNumeros = function(quantidade){
 
     return listaNumeros 
 }
+
+// função que retona uma lista de números pares até a quantidade limite de acordo com o usuário
+const criarListaPares = function(quantidade){
+
+    let listaNumerosPares = []
+
+    for(let i = 1; i <= quantidade; i++){       
+        listaNumerosPares.push(i * 2)   
+    }
+
+    return listaNumerosPares
+}
+
