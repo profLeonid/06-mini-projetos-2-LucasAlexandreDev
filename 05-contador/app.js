@@ -38,4 +38,15 @@ const criarListaImpares = function(quantidade){
     return listaNumerosImpares
 }
 
+// função que retorna uma lista de números múltiplicativos até a quantidade limite de acordo com o usuário
+const criarListaMultiplicativa5 = function(quantidade){
+
+    let listaNumerosMultiplicativo5 = []
+
+    for(let i = 1; i <= quantidade; i++){
+        listaNumerosMultiplicativo5.push(i * 5)
+    }
+
+    return listaNumerosMultiplicativo5
+}
 
