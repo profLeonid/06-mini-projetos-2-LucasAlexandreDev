@@ -49,3 +49,16 @@ const criarListaMultiplicacao = function(quantidade){
 
     return listaMultiplicacao
 }
+
+
+// função que retornar uma lista de Multiplicação (quantidade / i)
+const criarListaDivisao = function(quantidade){
+    
+    let listaDivisao = []
+
+    for(let i = 1; i < quantidade; i++){
+        listaDivisao.push(Number((quantidade / i).toFixed(2)))
+    }
+
+    return listaDivisao
+}
