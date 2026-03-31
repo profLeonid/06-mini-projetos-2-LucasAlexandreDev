@@ -18,3 +18,18 @@ const criarLinhaMes = function(numeroParcela){
 
     return listaMes
 }
+
+
+// função que retorna uma lista do valor de cada parcela, com base na quantidade de parcelas 
+const criarParcela = function(valorTotal, numeroParcela){
+
+    let parcela = valorTotal / numeroParcela
+    
+    let listaParcela = []
+    
+    for(let i = 1; i <= numeroParcela ; i++){
+        listaParcela.push(parcela)
+    }
+
+    return listaParcela
+}
