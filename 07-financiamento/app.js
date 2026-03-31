@@ -1,7 +1,6 @@
 'use strict'
 
 /*
-Parcela = valor total ÷ número de parcelas (calculada antes do loop, é fixa)
 Juros do Mês = saldo devedor × (taxa ÷ 100)
 Total do Mês = parcela + juros do mês
 Saldo Devedor = saldo devedor - parcela
@@ -31,5 +30,25 @@ const criarParcela = function(valorTotal, numeroParcela){
         listaParcela.push(parcela)
     }
 
+    criarJurosMes(listaParcela)
+
     return listaParcela
+
 }
+
+
+// const criarJurosMes = function(valorTotal, numeroParcela, taxaJuros){
+
+//     let saldoDevedor = valorTotal - numeroParcela
+//     let jurosMes     =  saldoDevedor * (taxaJuros / 100)
+    
+//     let listaJurosMes = []
+
+//     for(let i = 1; i < numeroParcela; i++){
+//         listaJurosMes.push(jurosMes)
+//     }
+
+//     return listaJurosMes
+// }
+
+// criarJurosMes(100, 20, 2)
