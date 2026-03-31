@@ -84,3 +84,21 @@ const criarLinha = function(numero, adicao, subtracao, multiplicao, divisao){
     
     tbory.appendChild(tr)
 }
+
+
+// função que é chamada pelo onclick do butão, montando a estrutra do tbory com base nas outras funções 
+const handleClick = function(){ 
+    const quantidade = Number(document.getElementById('quantidade').value) 
+    
+    const listaNumeros       = criarListaNumeros      (quantidade) 
+    const listaAdicao        = criarListaAdicao       (quantidade) 
+    const listaSubtracao     = criarListaSubtracao    (quantidade) 
+    const listaMultiplicacao = criarListaMultiplicacao(quantidade) 
+    const listaDivisao       = criarListaDivisao      (quantidade) 
+    
+    document.getElementById('tbody').replaceChildren() 
+    
+    for(let i = 0; i <= 10; i++){ 
+        criarLinha(listaNumeros[i], listaAdicao[i], listaSubtracao[i], listaMultiplicacao[i], listaDivisao[i]) 
+    } 
+}
