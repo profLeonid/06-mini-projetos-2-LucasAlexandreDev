@@ -62,6 +62,13 @@ const criarListaDivisao = function(quantidade){
     return listaDivisao
 }
 
+// função auxiliar para pintar negativo
+const aplicarCorSeNegativo = function(valor, elemento){
+    if(valor < 0){
+        elemento.style.color = 'red'
+    }
+}
+
 // função que cria a linha do tbory do HTML
 const criarLinha = function(numero, adicao, subtracao, multiplicao, divisao){
 
@@ -79,6 +86,12 @@ const criarLinha = function(numero, adicao, subtracao, multiplicao, divisao){
     tdSubtracao.textContent     = subtracao
     tdMultiplicacao.textContent = multiplicao
     tdDivisao.textContent       = divisao
+
+    aplicarCorSeNegativo(numero, tdNumero)
+    aplicarCorSeNegativo(adicao, tdAdicao)
+    aplicarCorSeNegativo(subtracao, tdSubtracao)
+    aplicarCorSeNegativo(multiplicao, tdMultiplicacao)
+    aplicarCorSeNegativo(divisao, tdDivisao)
 
     tr.replaceChildren(tdNumero, tdAdicao, tdSubtracao, tdMultiplicacao, tdDivisao)
     
@@ -102,3 +115,5 @@ const handleClick = function(){
         criarLinha(listaNumeros[i], listaAdicao[i], listaSubtracao[i], listaMultiplicacao[i], listaDivisao[i]) 
     } 
 }
+
+
